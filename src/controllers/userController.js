@@ -222,7 +222,7 @@ export const adminUpdateMerchant = async (req, res) => {
   }
 
   try {
-    await pool.query("CALL admin_update_merchant(?, ?, ?, ?)", [
+    await pool.query("CALL admin_update_merchant(?, ?, ?)", [
       id_merchant,
       nama_merchant || null,
       email || null,
@@ -230,7 +230,7 @@ export const adminUpdateMerchant = async (req, res) => {
 
     return res.status(200).json({
       status: "Success",
-      message: `Data mahasiswa dengan ID ${id_merchant} berhasil diperbarui`,
+      message: `Data merchant dengan ID ${id_merchant} berhasil diperbarui`,
     });
   } catch (error) {
     console.error("Error updating mahasiswa:", error);

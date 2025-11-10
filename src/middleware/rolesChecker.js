@@ -17,7 +17,7 @@ export const verifyRole = (roles = []) => {
         });
       }
 
-      req.user = decoded; // simpan info user di request untuk digunakan di controller
+      req.user = decoded; // simpan info user di request untuk dipake di controller
       next();
     });
   };

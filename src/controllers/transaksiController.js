@@ -5,7 +5,7 @@ export const transferMahasiswa = async (req, res) => {
 
     try {
         const [rows] = await pool.query(
-            'CALL sp_transfer_mahasiswa(?, ?, ?)',
+            'CALL sp_transfer_mahasiswa(?, ?, ?, ?)',
             [ rekeningPengirim, rekeningPenerima, nominal, pin ]
         );
 
